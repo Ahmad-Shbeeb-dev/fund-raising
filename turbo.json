@@ -10,9 +10,7 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
-    "start": {
-      "dependsOn": ["build"]
-    },
+    "start": {},
     "lint": {},
     "test": {},
     "test:e2e": {}
