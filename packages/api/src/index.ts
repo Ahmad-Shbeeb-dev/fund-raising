@@ -1,14 +1,23 @@
-import { Link } from 'links/entities/link.entity';
+import { CreateProjectDto } from './projects/dto/create-project.dto';
+import { UpdateProjectDto } from './projects/dto/update-project.dto';
+import { Project } from './projects/entities/project.entity';
 
-import { CreateLinkDto } from 'links/dto/create-link.dto';
-import { UpdateLinkDto } from 'links/dto/update-link.dto';
+export interface PaginatedResponse<T> {
+  data: T[];
+  meta: {
+    total: number;
+    page: number;
+    limit: number;
+    totalPages: number;
+  };
+}
 
-export const links = {
+export const projects = {
   dto: {
-    CreateLinkDto,
-    UpdateLinkDto,
+    CreateProjectDto,
+    UpdateProjectDto,
   },
   entities: {
-    Link,
+    Project,
   },
 };
